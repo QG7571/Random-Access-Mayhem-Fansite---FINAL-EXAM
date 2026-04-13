@@ -3,22 +3,80 @@
 }
 
 body {
-    display: flex;
+    display: block;
+    flex-direction: column;
 }
 ul {
     list-style-type: none;
 }
 
 h2 {
-    display: flex;
+    display: block;
+    flex-direction: row;
 }
 a:link {
     color: red;
 }
+li {
+    
+}
+
+/* The AWFULNESS that you need to style embedded audio files... */
+
+.thwang {
+  display: block;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 2rem;
+  position: relative;
+  align-items: center;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: red;
+}
+
+.thwang audio::-webkit-media-controls-mute-button {
+
+}
+
+.thwang audio::-webkit-media-controls-play-button {
+
+}
+
+audio::-webkit-media-controls-timeline-container .thwang {
+    display: none;
+}
+
+audio::-webkit-media-controls-current-time-display .thwang {
+    display: none;
+}
+
+audio::-webkit-media-controls-time-remaining-display .thwang {
+    display: none;
+}
+
+.thwang audio::-webkit-media-controls-timeline {
+    display: none;
+}
+
+.thwang audio::-webkit-media-controls-volume-slider-container {
+
+}
+
+.thwang audio::-webkit-media-controls-volume-slider {
+
+}
+
+
 .charIcon {
-    display: flex;
+    display: block;
     flex-direction: row;
+    max-width: 150px;
 }
 .attackIcon {
-    display: flex;
+    display: block;
+    border: 2px solid red;
+    max-width: 30px;
 }
