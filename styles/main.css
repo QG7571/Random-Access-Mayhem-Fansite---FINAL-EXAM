@@ -21,52 +21,25 @@ li {
     
 }
 
-/* The AWFULNESS that you need to style embedded audio files... */
+/* The AWFULNESS that you need to style embedded audio files... 
+And even then, it doesn't work properly.  
+
+TODO: Figure out how to seperate the styling for the Tachi Fortress music and the THWANG sfx
+*/
 
 .thwang {
   display: block;
   align-items: center;
   overflow: hidden;
-  width: 100%;
+  width: 40%;
   height: 2rem;
   position: relative;
   align-items: center;
+  align-self: center;
 }
 
 audio::-webkit-media-controls-panel {
     background-color: red;
-}
-
-.thwang audio::-webkit-media-controls-mute-button {
-
-}
-
-.thwang audio::-webkit-media-controls-play-button {
-
-}
-
-audio::-webkit-media-controls-timeline-container .thwang {
-    display: none;
-}
-
-audio::-webkit-media-controls-current-time-display .thwang {
-    display: none;
-}
-
-audio::-webkit-media-controls-time-remaining-display .thwang {
-    display: none;
-}
-
-.thwang audio::-webkit-media-controls-timeline {
-    display: none;
-}
-
-.thwang audio::-webkit-media-controls-volume-slider-container {
-
-}
-
-.thwang audio::-webkit-media-controls-volume-slider {
-
 }
 
 
