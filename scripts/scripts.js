@@ -38,6 +38,7 @@ function areWeFun() {
   };
 };
 
-window.onload = funCheck(); {
-  areWeFun();
-};
+window.onload = function () {
+    document.getElementById("copyright").innerHTML = new Date().getFullYear();
+    areWeFun();
+}
