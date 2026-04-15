@@ -57,3 +57,9 @@ audio::-webkit-media-controls-panel {
 .funEvent {
     display: none;
 }
+
+.creepyText {
+    color: red;
+    font-size: 120%;
+    text-shadow: 1px 1px 1px crimson;
+}
