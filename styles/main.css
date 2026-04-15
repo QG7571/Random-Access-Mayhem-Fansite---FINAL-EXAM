@@ -17,6 +17,9 @@ h2 {
 a:link {
     color: red;
 }
+a:link:visited {
+    color: rgb(128, 0, 0);
+}
 li {
     
 }
