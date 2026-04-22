@@ -24,6 +24,44 @@ li {
     
 }
 
+.quote {
+    font-style: italic;
+}
+/* Bot section coloration */
+.steeltoe {
+    background-color: #211121;
+    color: aliceblue;
+}
+.router {
+    background-color: #171E44;
+    color: aliceblue;
+}
+.aphid {
+    background-color: #0E3415;
+    color: aliceblue;
+}
+.deadlift {
+    background-color: #3A1218;
+    color: aliceblue;
+}
+.tachi {
+    background-color: #333333;
+    color: aliceblue;
+}
+.collider {
+    background-color: #C9571A;
+    color: aliceblue;
+}
+.thistle {
+    background-color: #4B211C;
+    color: aliceblue;
+}
+.epitaph {
+    background-color: #795F13;
+    color: aliceblue;
+}
+
+
 /* The AWFULNESS that you need to style embedded audio files... 
 And even then, it doesn't work properly.  
 */
