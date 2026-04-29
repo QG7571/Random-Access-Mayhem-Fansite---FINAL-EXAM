@@ -96,6 +96,8 @@ a:link {
     font-size: 300%;
     text-shadow: 2px 2px 2px crimson;
     text-align: center;
+    position: sticky;
+    top: 240px;
 }
 
 #nav_list ul {
@@ -123,6 +125,10 @@ a:link {
     background-color: crimson;
     color: black;
 }
+#nav_list p {
+    position: sticky;
+    top: 530px;
+}
 
 
 
@@ -144,6 +150,8 @@ li {
 .thistle,
 .epitaph {
     margin: 8px;
+    padding: 4px;
+    border: 3px solid crimson;
 }
 .triviamedia {
     max-width: 300px;
@@ -268,4 +276,7 @@ audio::-webkit-media-controls-panel {
     section {
         max-width: 100%;
     }
+
+
+    /* TODO - Fix and/or remove the sidebar in mobile view */
 }
