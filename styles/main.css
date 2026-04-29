@@ -1,11 +1,76 @@
 * {
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: squarewave;
+    src: url(../fonts/squarewave/Squarewave.ttf);
+}
+
+html {
+    background-image: url(../images/RAMAssets/altcoverart.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body {
-    display: block;
-    flex-direction: column;
+    display: grid;
+    font-family: squarewave;
+    font-size: 200%;
+    margin: 0 auto;
+    max-width: 1000px;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+        'header header'
+        'sidebar main'
+        'footer footer';
+    background-image: linear-gradient(to bottom, #0e0e0e, #890007);
+    position: relative;
 }
+
+header {
+    margin: 4px;
+    grid-area: header;
+    background-image: url(../images/RAMAssets/BigAhhRAMBanner.png);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas:
+        'image title'
+        'image subtitle';
+    text-align: center;
+}
+
+header img {
+    margin: 6px;
+    grid-area: image;
+    max-width: 200px;
+}
+
+header h1 {
+    margin: 6px;
+    grid-area: title;
+    font-size: 350%;
+}
+
+header h4 {
+    margin: 6px;
+    grid-area: subtitle;
+    font-size: 120%;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    color: red
+}
+
 ul {
     list-style-type: none;
 }
@@ -14,48 +79,113 @@ h2 {
     display: block;
     flex-direction: row;
 }
+
 a:link {
     color: red;
 }
-a:link:visited {
-    color: rgb(128, 0, 0);
+
+
+/* Everything for the navigation bar, stolen shamelessly from the favorite musician assignment */
+#nav_list {
+    margin-left: 15px;
+    grid-area: sidebar;
 }
+
+#nav_list h3 {
+    color: red;
+    font-size: 300%;
+    text-shadow: 2px 2px 2px crimson;
+    text-align: center;
+}
+
+#nav_list ul {
+    text-decoration: none;
+    list-style: none;
+    position: sticky;
+    top: 20px;
+}
+
+#nav_list li {
+    margin-bottom: 12px;
+}
+
+#nav_list a {
+    border-radius: 2vh;
+    display: block;
+    background-color: black;
+    color: crimson;
+    padding: 8px 20px;
+    transition: all ease-in-out 200ms;
+    text-decoration: none;
+}
+
+#nav_list a:hover {
+    background-color: crimson;
+    color: black;
+}
+
+
+
 li {
-    
+
 }
 
 .quote {
     font-style: italic;
 }
-/* Bot section coloration */
+
+/* Bot section formatting */
+.steeltoe,
+.router,
+.aphid,
+.deadlift,
+.tachi,
+.collider,
+.thistle,
+.epitaph {
+    margin: 8px;
+}
+.triviamedia {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 4px;
+}
+
 .steeltoe {
     background-color: #211121;
     color: aliceblue;
 }
+
 .router {
     background-color: #171E44;
     color: aliceblue;
 }
+
 .aphid {
     background-color: #0E3415;
     color: aliceblue;
 }
+
 .deadlift {
     background-color: #3A1218;
     color: aliceblue;
 }
+
 .tachi {
     background-color: #333333;
     color: aliceblue;
 }
+
 .collider {
     background-color: #C9571A;
     color: aliceblue;
 }
+
 .thistle {
     background-color: #4B211C;
     color: aliceblue;
 }
+
 .epitaph {
     background-color: #795F13;
     color: aliceblue;
@@ -67,14 +197,14 @@ And even then, it doesn't work properly.
 */
 
 .thwang {
-  display: block;
-  align-items: center;
-  overflow: hidden;
-  width: 40%;
-  height: 2rem;
-  position: relative;
-  align-items: center;
-  align-self: center;
+    display: block;
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+    height: 2rem;
+    position: relative;
+    align-items: center;
+    align-self: center;
 }
 
 audio::-webkit-media-controls-panel {
@@ -87,6 +217,7 @@ audio::-webkit-media-controls-panel {
     flex-direction: row;
     max-width: 150px;
 }
+
 .attackIcon {
     display: block;
     border: 2px solid red;
@@ -103,4 +234,38 @@ audio::-webkit-media-controls-panel {
     color: red;
     font-size: 120%;
     text-shadow: 1px 1px 1px crimson;
+}
+
+
+
+
+/* Media Query Crud!!! */
+@media only screen and (max-width: 767px) {
+    #nav_list {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header h1 {
+        margin: 3px 15px;
+    }
+    header h4 {
+        margin: 3px 15px;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'header'
+            'main'
+            'footer';
+    }
+
+    section {
+        max-width: 100%;
+    }
 }
