@@ -138,6 +138,9 @@ li {
 
 .quote {
     font-style: italic;
+    border-left: 4px solid crimson;
+    padding-left: 4px;
+    /* TODO - Make the quotes have the side bar thingie */
 }
 
 /* Bot section formatting */
@@ -152,10 +155,26 @@ li {
     margin: 8px;
     padding: 4px;
     border: 3px solid crimson;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 
+    'icon text';
 }
+main div li {
+    margin-bottom: 12px;
+}
+/* TODO - Fix this bullcrap */
+.inlineImg {
+    grid-area: icon;
+    margin-top: 5px;
+}
+.inlineText {
+    grid-area: text;
+}
+
 .triviamedia {
     max-width: 300px;
     max-height: 300px;
+    min-width: 100px;
     margin: 4px;
 }
 
@@ -163,20 +182,32 @@ li {
     background-color: #211121;
     color: aliceblue;
 }
+.steeltoe .attackIcon {
+    background-color: aliceblue;
+}
 
 .router {
     background-color: #171E44;
     color: aliceblue;
+}
+.router .attackIcon {
+    background-color: aliceblue;
 }
 
 .aphid {
     background-color: #0E3415;
     color: aliceblue;
 }
+.aphid .attackIcon {
+    background-color: aliceblue;
+}
 
 .deadlift {
     background-color: #3A1218;
     color: aliceblue;
+}
+.deadlift .attackIcon {
+    background-color: aliceblue;
 }
 
 .tachi {
